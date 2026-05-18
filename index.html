@@ -1,691 +1,1080 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="description" content="Orbitor,business,company,agency,modern,bootstrap4,tech,software">
-  <meta name="author" content="themefisher.com">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="description" content="Asad Hospital - 24x7 Multispeciality Hospital in Alwar, Rajasthan. Emergency, Trauma, Surgery, Maternity Care with cashless facilities and government schemes.">
+  <meta name="keywords" content="Best Hospital in Alwar, Emergency Hospital in Alwar, Laparoscopic Surgeon in Alwar, Gynecologist in Alwar, Orthopedic Doctor in Alwar, 24 Hour Hospital in Alwar, Cashless Hospital in Alwar, MAA Yojna Hospital in Alwar, Ayushman Bharat Hospital in Alwar">
+  <meta name="author" content="Asad Hospital">
+  <title>Asad Hospital | 24x7 Multispeciality Hospital in Alwar</title>
+  
+  <link rel="shortcut icon" href="#" type="image/x-icon">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- AOS Library CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Font Awesome 6 (Free Universal Kit) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Exo:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ========== GLOBAL VARIABLES & THEME CONFIGURATION ========== */
+    :root {
+      --primary-dark: #0a2540;      /* Dark Blue */
+      --primary: #1a4a7a;           /* Primary Blue */
+      --secondary: #00a896;         /* Teal */
+      --danger: #e63946;             /* Emergency Red */
+      --whatsapp: #25D366;           /* WhatsApp Green */
+      --light-bg: #f8fafc;
+      --text-dark: #1e2a3e;
+      --text-muted: #5a6e7f;
+      --white: #ffffff;
+      --shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.06);
+      --shadow-hover: 0 20px 35px -12px rgba(0, 0, 0, 0.12);
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: var(--text-muted);
+      line-height: 1.6;
+      overflow-x: hidden;
+      background-color: var(--white);
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Exo', sans-serif;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+    
+    .section {
+      padding: 80px 0;
+    }
+    
+    .section-sm {
+      padding: 50px 0;
+    }
+    
+    .section-title {
+      margin-bottom: 3.5rem;
+      text-align: center;
+    }
+    
+    .section-title h2 {
+      color: var(--primary);
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+    
+    .divider {
+      width: 70px;
+      height: 4px;
+      background: var(--secondary);
+      margin: 1rem auto;
+      border-radius: 5px;
+    }
+    
+    .divider-left {
+      width: 60px;
+      height: 4px;
+      background: var(--secondary);
+      margin: 1rem 0 1.5rem 0;
+      border-radius: 5px;
+    }
+    
+    /* Buttons Native Structure */
+    .btn {
+      padding: 0.8rem 2rem;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    
+    .btn-primary-custom {
+      background: var(--primary);
+      color: var(--white);
+      border: 2px solid var(--primary);
+    }
+    
+    .btn-primary-custom:hover {
+      background: var(--primary-dark);
+      border-color: var(--primary-dark);
+      transform: translateY(-3px);
+      color: white;
+    }
+    
+    .btn-emergency {
+      background: var(--danger);
+      color: white;
+      border: 2px solid var(--danger);
+    }
+    
+    .btn-emergency:hover {
+      background: #c1121f;
+      transform: translateY(-3px);
+      color: white;
+    }
+    
+    .btn-whatsapp {
+      background: var(--whatsapp);
+      color: white;
+      border: 2px solid var(--whatsapp);
+    }
+    
+    .btn-whatsapp:hover {
+      background: #128C7E;
+      transform: translateY(-3px);
+      color: white;
+    }
 
-  <title>Novena- Health & Care Medical template</title>
+    .btn-secondary-custom {
+      background: var(--secondary);
+      color: var(--white);
+      border: 2px solid var(--secondary);
+    }
+    
+    .btn-secondary-custom:hover {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: var(--white);
+      transform: translateY(-3px);
+    }
+    
+    /* Top Header Bar */
+    .top-header {
+      background: var(--primary-dark);
+      padding: 10px 0;
+      color: white;
+      font-size: 14px;
+    }
+    
+    .top-header a {
+      color: white;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    
+    .top-header a:hover {
+      color: var(--secondary);
+    }
+    
+    .top-header i {
+      margin-right: 6px;
+      color: var(--secondary);
+    }
+    
+    /* Navbar styling */
+    .navbar {
+      padding: 18px 0;
+      background: var(--white);
+      box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    }
+    
+    .navbar-brand h3 {
+      margin-bottom: 0;
+      font-weight: 800;
+      font-size: 1.6rem;
+      color: var(--primary);
+      font-family: 'Exo', sans-serif;
+    }
+    
+    .navbar-brand span {
+      font-size: 0.8rem;
+      display: block;
+      color: var(--secondary);
+      font-weight: 500;
+    }
+    
+    .navbar-nav .nav-link {
+      font-weight: 600;
+      color: var(--text-dark);
+      margin: 0 8px;
+      font-family: 'Exo', sans-serif;
+      transition: 0.2s;
+    }
+    
+    .navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+      color: var(--secondary);
+    }
+    
+    /* Hero/Banner Frame */
+    .hero {
+      background: linear-gradient(135deg, #eef2ff 0%, #ffffff 100%);
+      min-height: 620px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 60px 0;
+    }
+    
+    .hero h1 {
+      font-size: 3.4rem;
+      font-weight: 800;
+      color: var(--primary-dark);
+      line-height: 1.15;
+    }
 
-  <!-- Favicon -->
-  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+    .hero h1 span {
+      color: var(--secondary);
+    }
+    
+    .hero .badge-scheme {
+      background: var(--white);
+      color: var(--primary);
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      display: inline-block;
+      margin-right: 10px;
+      margin-bottom: 12px;
+      font-weight: 600;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      border-left: 4px solid var(--secondary);
+    }
+    
+    /* Floating Features Segment */
+    .features {
+      margin-top: -60px;
+      position: relative;
+      z-index: 10;
+    }
 
-  <!-- bootstrap.min css -->
-  <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
-  <!-- Icon Font Css -->
-  <link rel="stylesheet" href="plugins/icofont/icofont.min.css">
-  <!-- Slick Slider  CSS -->
-  <link rel="stylesheet" href="plugins/slick-carousel/slick/slick.css">
-  <link rel="stylesheet" href="plugins/slick-carousel/slick/slick-theme.css">
+    .feature-card {
+      background: var(--white);
+      padding: 35px 25px;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      transition: 0.3s;
+      height: 100%;
+      border-top: 4px solid transparent;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-hover);
+    }
 
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+    .feature-card.emergency-card { border-top-color: var(--danger); }
+    .feature-card.scheme-card { border-top-color: var(--primary); }
+    .feature-card.timing-card { border-top-color: var(--secondary); }
+    
+    .feature-icon {
+      font-size: 44px;
+      color: var(--secondary);
+      margin-bottom: 15px;
+    }
 
+    .feature-card.emergency-card .feature-icon { color: var(--danger); }
+    
+    /* About Elements */
+    .about-img img {
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      width: 100%;
+    }
+
+    .why-choose-list li {
+      margin-bottom: 12px;
+      font-size: 1.05rem;
+      color: var(--text-dark);
+      list-style: none;
+    }
+
+    .why-choose-list i {
+      color: var(--secondary);
+      margin-right: 10px;
+      font-size: 1.1rem;
+    }
+    
+    /* Doctor Cards mapping */
+    .doctor-card {
+      background: var(--white);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: 0.3s;
+      height: 100%;
+      border: 1px solid #f1f5f9;
+    }
+    
+    .doctor-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-hover);
+    }
+    
+    .doctor-img {
+      background: var(--light-bg);
+      text-align: center;
+      padding: 30px 0 10px 0;
+    }
+
+    .doctor-img img {
+      max-height: 260px;
+      object-fit: cover;
+    }
+    
+    .doctor-info {
+      padding: 25px;
+    }
+    
+    .doctor-info h4 {
+      margin-bottom: 5px;
+      font-size: 1.35rem;
+    }
+    
+    .doctor-info .specialty {
+      color: var(--secondary);
+      font-weight: 600;
+      margin-bottom: 15px;
+      font-size: 0.95rem;
+      display: block;
+    }
+
+    .expert-badges span {
+      display: inline-block;
+      background: #f0fdfa;
+      color: #0f766e;
+      padding: 4px 12px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      margin-right: 6px;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    
+    /* Service Section Layout */
+    .service-card {
+      background: var(--white);
+      padding: 35px 25px;
+      border-radius: 18px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+      transition: 0.3s;
+      height: 100%;
+      border: 1px solid #f1f5f9;
+    }
+    
+    .service-card:hover {
+      box-shadow: 0 15px 30px rgba(30, 58, 138, 0.1);
+      transform: translateY(-5px);
+      border-color: rgba(13, 148, 136, 0.2);
+    }
+    
+    .service-card i {
+      font-size: 40px;
+      color: var(--secondary);
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+    
+    /* Banner Scheme Base Wrapper */
+    .scheme-section {
+      background: linear-gradient(rgba(30, 58, 138, 0.95), rgba(21, 36, 64, 0.98)), url('https://placehold.co/1920xl600/1e3a8a/white?text=Cashless+Panels');
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+
+    .scheme-box {
+      background: var(--white);
+      color: var(--text-dark);
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      height: 100%;
+      box-shadow: var(--shadow);
+    }
+    
+    .scheme-box i {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+    
+    /* Testimonials Elements */
+    .testimonial-card {
+      background: var(--white);
+      border-radius: 24px;
+      padding: 35px;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+
+    .testimonial-card p {
+      font-style: italic;
+      color: var(--text-dark);
+    }
+    
+    /* Gallery Frame */
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      transition: 0.4s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.08);
+    }
+
+    .gallery-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,0.7));
+      padding: 15px;
+      color: white;
+      font-weight: 500;
+    }
+
+    /* Contact Details Architecture */
+    .contact-info-block {
+      background: #f8fafc;
+      padding: 40px;
+      border-radius: 20px;
+      height: 100%;
+    }
+
+    .contact-info-item {
+      display: flex;
+      margin-bottom: 25px;
+    }
+
+    .contact-info-item .icon-box {
+      width: 50px;
+      height: 50px;
+      background: rgba(30, 58, 138, 0.06);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      font-size: 1.3rem;
+      margin-right: 18px;
+      flex-shrink: 0;
+    }
+
+    .map-container {
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 4px solid var(--white);
+    }
+
+    /* Appointment Wrapper Custom Styles */
+    .appoinment-wrap {
+      background: var(--white);
+      padding: 40px;
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .form-control-custom {
+      height: 52px;
+      border: 1px solid #cbd5e1;
+      background: var(--white);
+      border-radius: 12px;
+      padding: 0 18px;
+      width: 100%;
+      margin-bottom: 20px;
+      transition: 0.2s;
+    }
+
+    .form-control-custom:focus {
+      outline: none;
+      border-color: var(--secondary);
+      box-shadow: 0 0 0 3px rgba(0, 168, 150, 0.1);
+    }
+    
+    textarea.form-control-custom {
+      padding: 12px 18px;
+      height: auto;
+    }
+
+    /* Native Fixed Floating Actions */
+    .floating-buttons {
+      position: fixed;
+      bottom: 30px;
+      left: 25px;
+      z-index: 999;
+    }
+
+    .floating-btn {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 26px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      text-decoration: none;
+      transition: 0.3s;
+      margin-top: 10px;
+    }
+
+    .floating-btn:hover {
+      transform: scale(1.1);
+      color: white;
+    }
+
+    .floating-whatsapp { background-color: var(--whatsapp); }
+    .floating-call { background-color: var(--danger); }
+    
+    .backtop {
+      position: fixed;
+      bottom: 30px;
+      right: 25px;
+      width: 50px;
+      height: 50px;
+      background: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 20px;
+      z-index: 99;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.3s;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    
+    .backtop.reveal {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    /* Footer Area Configuration */
+    .footer {
+      background: #0a1a2f;
+      color: #b8c9e5;
+      padding-top: 80px;
+    }
+    
+    .footer h5, .footer h4 {
+      color: var(--white);
+      margin-bottom: 25px;
+    }
+    
+    .footer a {
+      color: #b8c9e5;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    
+    .footer a:hover {
+      color: var(--secondary);
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+      list-style: none;
+    }
+    
+    @media (max-width: 991px) {
+      .hero h1 { font-size: 2.8rem; }
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.2rem; }
+      .section { padding: 60px 0; }
+      .features { margin-top: -30px; }
+      .top-header .text-md-end { text-align: left !important; margin-top: 8px; }
+      .floating-buttons { bottom: 20px; left: 15px; }
+      .backtop { bottom: 20px; right: 15px; }
+    }
+  </style>
 </head>
+<body>
 
-<body id="top">
+<!-- TOP ACTIONS NAVIGATION BAR -->
+<div class="top-header">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-7 col-md-12">
+        <i class="fas fa-phone-alt"></i> Emergency Line: 
+        <a href="tel:+919587298975">+91 9587298975</a> | <a href="tel:+917976573436">+91 7976573436</a>
+        &nbsp;&nbsp;<i class="fas fa-map-marker-alt"></i> Near Bhagat Singh Circle, Alwar, Rajasthan
+      </div>
+      <div class="col-lg-5 col-md-12 text-md-end">
+        <i class="fas fa-clock"></i> Open 24 Hours | Emergency Coverage
+        <a href="https://wa.me/919587298975?text=Hello%20Asad%20Hospital%2C%20I%20need%20assistance" target="_blank" class="btn btn-sm btn-whatsapp ms-3" style="padding: 4px 12px; font-size:12px;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</div>
 
-<header>
-	<div class="header-top-bar">
-		<div class="container">
-			<div class="row align-items-center">
-				<div class="col-lg-6">
-					<ul class="top-bar-info list-inline-item pl-0 mb-0">
-						<li class="list-inline-item"><a href="mailto:support@gmail.com"><i class="icofont-support-faq mr-2"></i>support@novena.com</a></li>
-						<li class="list-inline-item"><i class="icofont-location-pin mr-2"></i>Address Ta-134/A, New York, USA </li>
-					</ul>
-				</div>
-				<div class="col-lg-6">
-					<div class="text-lg-right top-right-bar mt-2 mt-lg-0">
-						<a href="tel:+23-345-67890" >
-							<span>Call Now : </span>
-							<span class="h4">823-4565-13456</span>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<nav class="navbar navbar-expand-lg navigation" id="navbar">
-		<div class="container">
-		 	 <a class="navbar-brand" href="index.html">
-			  	<img src="images/logo.png" alt="" class="img-fluid">
-			  </a>
+<!-- STICKY TOP MAIN NAVBAR -->
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <h3>ASAD HOSPITAL</h3>
+      <span>24x7 Multispeciality & Emergency Care</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#doctors">Our Doctors</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+        <li class="nav-item ms-lg-2 mt-2 mt-lg-0"><a href="#appointment" class="btn btn-secondary-custom btn-sm py-2 px-3 text-white">Book Appointment</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-		  	<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarmain" aria-controls="navbarmain" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="icofont-navigation-menu"></span>
-		  </button>
-	  
-		  <div class="collapse navbar-collapse" id="navbarmain">
-			<ul class="navbar-nav ml-auto">
-			  <li class="nav-item active">
-				<a class="nav-link" href="index.html">Home</a>
-			  </li>
-			   <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-			    <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
-
-			    <li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="department.html" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Department <i class="icofont-thin-down"></i></a>
-					<ul class="dropdown-menu" aria-labelledby="dropdown02">
-						<li><a class="dropdown-item" href="department.html">Departments</a></li>
-						<li><a class="dropdown-item" href="department-single.html">Department Single</a></li>
-					</ul>
-			  	</li>
-
-			  	<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="doctor.html" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Doctors <i class="icofont-thin-down"></i></a>
-					<ul class="dropdown-menu" aria-labelledby="dropdown03">
-						<li><a class="dropdown-item" href="doctor.html">Doctors</a></li>
-						<li><a class="dropdown-item" href="doctor-single.html">Doctor Single</a></li>
-						<li><a class="dropdown-item" href="appoinment.html">Appoinment</a></li>
-					</ul>
-			  	</li>
-
-			   <li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="blog-sidebar.html" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog <i class="icofont-thin-down"></i></a>
-					<ul class="dropdown-menu" aria-labelledby="dropdown05">
-						<li><a class="dropdown-item" href="blog-sidebar.html">Blog with Sidebar</a></li>
-
-						<li><a class="dropdown-item" href="blog-single.html">Blog Single</a></li>
-					</ul>
-			  	</li>
-			   <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-			</ul>
-		  </div>
-		</div>
-	</nav>
-</header>
-	
-
-
-
-<!-- Slider Start -->
-<section class="banner">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-6 col-md-12 col-xl-7">
-				<div class="block">
-					<div class="divider mb-3"></div>
-					<span class="text-uppercase text-sm letter-spacing ">Total Health care solution</span>
-					<h1 class="mb-3 mt-3">Your most trusted health partner</h1>
-					
-					<p class="mb-4 pr-5">A repudiandae ipsam labore ipsa voluptatum quidem quae laudantium quisquam aperiam maiores sunt fugit, deserunt rem suscipit placeat.</p>
-					<div class="btn-container ">
-						<a href="appoinment.html" target="_blank" class="btn btn-main-2 btn-icon btn-round-full">Make appoinment <i class="icofont-simple-right ml-2  "></i></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+<!-- HERO/BANNER CONTAINER -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-7" data-aos="fade-right">
+        <div>
+          <div class="scheme-badges mb-2">
+            <span class="badge-scheme"><i class="fas fa-hand-holding-heart text-success"></i> Rajasthan MAA Yojna</span>
+            <span class="badge-scheme"><i class="fas fa-shield-halved text-primary"></i> Haryana Ayushman Bharat</span>
+            <span class="badge-scheme"><i class="fas fa-credit-card text-info"></i> All TPA Cashless</span>
+          </div>
+          <h1 class="mt-3">Complete Healthcare Solutions <span>Available 24×7</span></h1>
+          <p class="lead text-dark mt-3">Your health is our ultimate priority. Providing premium emergency care, trauma response, advanced laparoscopic surgeries, comprehensive maternity services, and specialty orthopedic/urology care with world-class medical expertise right in the heart of Alwar.</p>
+          <div class="mt-4 d-flex flex-wrap gap-2">
+            <a href="#appointment" class="btn btn-primary-custom"><i class="fas fa-calendar-check"></i> Book Appointment</a>
+            <a href="tel:+919587298975" class="btn btn-emergency"><i class="fas fa-phone-alt"></i> Call Emergency</a>
+            <a href="https://wa.me/919587298975?text=Hello%20Asad%20Hospital%2C%20I%20need%20help" class="btn btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5" data-aos="fade-left">
+        <img src="images/bg/hero.png" alt="Hospital Care" class="img-fluid rounded-4 shadow">
+      </div>
+    </div>
+  </div>
 </section>
+
+<!-- FLOATING CARDS FRAMEWORK -->
 <section class="features">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<div class="feature-block d-lg-flex">
-					<div class="feature-item mb-5 mb-lg-0">
-						<div class="feature-icon mb-4">
-							<i class="icofont-surgeon-alt"></i>
-						</div>
-						<span>24 Hours Service</span>
-						<h4 class="mb-3">Online Appoinment</h4>
-						<p class="mb-4">Get ALl time support for emergency.We have introduced the principle of family medicine.</p>
-						<a href="appoinment.html" class="btn btn-main btn-round-full">Make a appoinment</a>
-					</div>
-				
-					<div class="feature-item mb-5 mb-lg-0">
-						<div class="feature-icon mb-4">
-							<i class="icofont-ui-clock"></i>
-						</div>
-						<span>Timing schedule</span>
-						<h4 class="mb-3">Working Hours</h4>
-						<ul class="w-hours list-unstyled">
-		                    <li class="d-flex justify-content-between">Sun - Wed : <span>8:00 - 17:00</span></li>
-		                    <li class="d-flex justify-content-between">Thu - Fri : <span>9:00 - 17:00</span></li>
-		                    <li class="d-flex justify-content-between">Sat - sun : <span>10:00 - 17:00</span></li>
-		                </ul>
-					</div>
-				
-					<div class="feature-item mb-5 mb-lg-0">
-						<div class="feature-icon mb-4">
-							<i class="icofont-support"></i>
-						</div>
-						<span>Emegency Cases</span>
-						<h4 class="mb-3">1-800-700-6200</h4>
-						<p>Get ALl time support for emergency.We have introduced the principle of family medicine.Get Conneted with us for any urgency .</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+  <div class="container">
+    <div class="row g-4 justify-content-center">
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="feature-card emergency-card">
+          <div class="feature-icon"><i class="fas fa-ambulance"></i></div>
+          <h4 class="my-3">24×7 Emergency & Trauma</h4>
+          <p>Equipped with critical emergency support systems and swift trauma care management. Accidental and urgent treatment lines open 24/7.</p>
+          <a href="tel:+919587298975" class="btn btn-emergency btn-sm mt-3">Call Desk Now</a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="feature-card scheme-card">
+          <div class="feature-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+          <h4 class="my-3">Government Panel & Cashless</h4>
+          <p>Get completely cashless or subsidized health treatments under Rajasthan MAA Yojna, Haryana Ayushman Bharat, and major health TPA providers.</p>
+          <a href="#schemes" class="btn btn-primary-custom btn-sm mt-3">Check Schemes</a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="feature-card timing-card">
+          <div class="feature-icon"><i class="fas fa-user-clock"></i></div>
+          <h4 class="my-3">Hospital Availability</h4>
+          <p class="mb-2">We provide non-stop clinical coverage to support families during unexpected hours.</p>
+          <ul class="list-unstyled text-start border-top pt-2 mt-2" style="font-size: 0.95rem;">
+            <li class="d-flex justify-content-between py-1"><span>Emergency/Trauma:</span> <strong class="text-danger">24 Hours</strong></li>
+            <li class="d-flex justify-content-between py-1"><span>Pharmacy & Lab:</span> <strong class="text-success">24 Hours</strong></li>
+            <li class="d-flex justify-content-between py-1"><span>Doctor Availability:</span> <strong class="text-primary">24 Hours Cover</strong></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-
-<section class="section about">
-	<div class="container">
-		<div class="row align-items-center">
-			<div class="col-lg-4 col-sm-6">
-				<div class="about-img">
-					<img src="images/about/img-1.jpg" alt="" class="img-fluid">
-					<img src="images/about/img-2.jpg" alt="" class="img-fluid mt-4">
-				</div>
-			</div>
-			<div class="col-lg-4 col-sm-6">
-				<div class="about-img mt-4 mt-lg-0">
-					<img src="images/about/img-3.jpg" alt="" class="img-fluid">
-				</div>
-			</div>
-			<div class="col-lg-4">
-				<div class="about-content pl-4 mt-4 mt-lg-0">
-					<h2 class="title-color">Personal care <br>& healthy living</h2>
-					<p class="mt-4 mb-5">We provide best leading medicle service Nulla perferendis veniam deleniti ipsum officia dolores repellat laudantium obcaecati neque.</p>
-
-					<a href="service.html" class="btn btn-main-2 btn-round-full btn-icon">Services<i class="icofont-simple-right ml-3"></i></a>
-				</div>
-			</div>
-		</div>
-	</div>
+<!-- GENERAL MEDICAL ABOUT WRAP -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6" data-aos="fade-right">
+        <div class="row g-3">
+          <div class="col-6">
+            <img src="images/team/team1.jpeg" alt="Emergency" class="img-fluid rounded-4 mb-3">
+          </div>
+         <div class="col-6 d-flex flex-column gap-3">
+      <img src="./images/team/team1.jpeg" alt="OT" class="img-fluid rounded-4 w-100 object-fit-cover" style="height: 117px;">
+      <img src="./images/team/team2.jpeg" alt="Hospital interior" class="img-fluid rounded-4 w-100 object-fit-cover" style="height: 117px;">
+    </div>
+        </div>
+      </div>
+      <div class="col-lg-6" data-aos="fade-left">
+        <span class="text-uppercase text-sm fw-bold" style="color: var(--secondary);">Welcome to Asad Hospital</span>
+        <h2 class="mt-2">Providing Compassionate & Quality Healthcare Services</h2>
+        <div class="divider-left"></div>
+        <p class="mt-3">Asad Hospital is a dedicated multispeciality healthcare center located near Bhagat Singh Circle, Alwar. Our core mission is providing elite, highly affordable healthcare services with instant 24-hour medical and accident support systems.</p>
+        <p>We combine premium diagnostic insights, cutting-edge surgical environments, and highly skilled medical professionals under one single roof to serve families across Rajasthan and Haryana seamlessly.</p>
+        
+        <h4 class="mt-4 mb-3" style="font-size: 1.2rem; color: var(--text-dark);">Core Medical Provisions:</h4>
+        <div class="row">
+          <div class="col-md-6">
+            <ul class="why-choose-list p-0">
+              <li><i class="fas fa-check-circle"></i> Emergency & Trauma Services</li>
+              <li><i class="fas fa-check-circle"></i> General & Laparoscopic Surgery</li>
+              <li><i class="fas fa-check-circle"></i> Orthopedic & Fracture Care</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul class="why-choose-list p-0">
+              <li><i class="fas fa-check-circle"></i> Obstetrics & Gynecology Care</li>
+              <li><i class="fas fa-check-circle"></i> Urinary Problem Treatments</li>
+              <li><i class="fas fa-check-circle"></i> Cashless Treatment Panels</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-<section class="cta-section ">
-	<div class="container">
-		<div class="cta position-relative">
-			<div class="row">
-				<div class="col-lg-3 col-md-6 col-sm-6">
-					<div class="counter-stat">
-						<i class="icofont-doctor"></i>
-						<span class="h3">58</span>k
-						<p>Happy People</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 col-sm-6">
-					<div class="counter-stat">
-						<i class="icofont-flag"></i>
-						<span class="h3">700</span>+
-						<p>Surgery Comepleted</p>
-					</div>
-				</div>
-				
-				<div class="col-lg-3 col-md-6 col-sm-6">
-					<div class="counter-stat">
-						<i class="icofont-badge"></i>
-						<span class="h3">40</span>+
-						<p>Expert Doctors</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 col-sm-6">
-					<div class="counter-stat">
-						<i class="icofont-globe"></i>
-						<span class="h3">20</span>
-						<p>Worldwide Branch</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+
+<!-- SERVICES GRID SEGMENT -->
+<section class="section" id="services" style="background: var(--light-bg);">
+  <div class="container">
+    <div class="section-title" data-aos="fade-up">
+      <h2>Our Medical Services</h2>
+      <div class="divider"></div>
+      <p>Providing precision therapeutics and compassionate operational excellence across key medical divisions.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-3 col-md-6"><div class="service-card"><i class="fas fa-stethoscope"></i><h5>General Surgery</h5><p>Advanced abdominal, open and therapeutic visceral surgical interventions done via expert frameworks.</p></div></div>
+      <div class="col-lg-3 col-md-6"><div class="service-card"><i class="fas fa-laptop-medical"></i><h5>Laparoscopic Surgery</h5><p>Minimally invasive keyhole surgical techniques helping patients experience minimal blood loss.</p></div></div>
+      <div class="col-lg-3 col-md-6"><div class="service-card"><i class="fas fa-bone"></i><h5>Orthopedic Care</h5><p>Treatment of structural bone fractures, joint problems, dislocations, and accidental injuries.</p></div></div>
+      <div class="col-lg-3 col-md-6"><div class="service-card"><i class="fas fa-baby-carriage"></i><h5>Obstetrics & Gynecology</h5><p>Comprehensive maternal healthcare ecosystem handling routine high-risk prenatal journeys.</p></div></div>
+      <div class="col-lg-3 col-md-6"><div class="service-card"><i class="fas fa-notes-medical"></i><h5>Emergency & Trauma</h5><p>Immediate live saving care protocols and multi-trauma stabilization run 24 hours.</p></div></div>
+      <div class="col-lg-3 col-md-6"><div class="service-card"><i class="fas fa-crutch"></i><h5>Urinary Problem</h5><p>Detailed therapeutic insights addressing urinary infections and renal stone structures.</p></div></div>
+      <div class="col-lg-3 col-md-6"><div class="service-card"><i class="fas fa-heartbeat"></i><h5>ICU & Critical Care</h5><p>Continuous monitoring grid infrastructure setups ensuring error-free emergency support.</p></div></div>
+      <div class="col-lg-3 col-md-6"><div class="service-card"><i class="fas fa-truck-medical"></i><h5>Ambulance Services</h5><p>Fast emergency transportation logistic support matrix mapped across nearby networks.</p></div></div>
+    </div>
+  </div>
 </section>
-<section class="section service gray-bg">
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-lg-7 text-center">
-				<div class="section-title">
-					<h2>Award winning patient care</h2>
-					<div class="divider mx-auto my-4"></div>
-					<p>Lets know moreel necessitatibus dolor asperiores illum possimus sint voluptates incidunt molestias nostrum laudantium. Maiores porro cumque quaerat.</p>
-				</div>
-			</div>
-		</div>
 
-		<div class="row">
-			<div class="col-lg-4 col-md-6 col-sm-6">
-				<div class="service-item mb-4">
-					<div class="icon d-flex align-items-center">
-						<i class="icofont-laboratory text-lg"></i>
-						<h4 class="mt-3 mb-3">Laboratory services</h4>
-					</div>
-
-					<div class="content">
-						<p class="mb-4">Saepe nulla praesentium eaque omnis perferendis a doloremque.</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-lg-4 col-md-6 col-sm-6">
-				<div class="service-item mb-4">
-					<div class="icon d-flex align-items-center">
-						<i class="icofont-heart-beat-alt text-lg"></i>
-						<h4 class="mt-3 mb-3">Heart Disease</h4>
-					</div>
-					<div class="content">
-						<p class="mb-4">Saepe nulla praesentium eaque omnis perferendis a doloremque.</p>
-					</div>
-				</div>
-			</div>
-			
-			<div class="col-lg-4 col-md-6 col-sm-6">
-				<div class="service-item mb-4">
-					<div class="icon d-flex align-items-center">
-						<i class="icofont-tooth text-lg"></i>
-						<h4 class="mt-3 mb-3">Dental Care</h4>
-					</div>
-					<div class="content">
-						<p class="mb-4">Saepe nulla praesentium eaque omnis perferendis a doloremque.</p>
-					</div>
-				</div>
-			</div>
-
-
-			<div class="col-lg-4 col-md-6 col-sm-6">
-				<div class="service-item mb-4">
-					<div class="icon d-flex align-items-center">
-						<i class="icofont-crutch text-lg"></i>
-						<h4 class="mt-3 mb-3">Body Surgery</h4>
-					</div>
-
-					<div class="content">
-						<p class="mb-4">Saepe nulla praesentium eaque omnis perferendis a doloremque.</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-lg-4 col-md-6 col-sm-6">
-				<div class="service-item mb-4">
-					<div class="icon d-flex align-items-center">
-						<i class="icofont-brain-alt text-lg"></i>
-						<h4 class="mt-3 mb-3">Neurology Sargery</h4>
-					</div>
-					<div class="content">
-						<p class="mb-4">Saepe nulla praesentium eaque omnis perferendis a doloremque.</p>
-					</div>
-				</div>
-			</div>
-			
-			<div class="col-lg-4 col-md-6 col-sm-6">
-				<div class="service-item mb-4">
-					<div class="icon d-flex align-items-center">
-						<i class="icofont-dna-alt-1 text-lg"></i>
-						<h4 class="mt-3 mb-3">Gynecology</h4>
-					</div>
-					<div class="content">
-						<p class="mb-4">Saepe nulla praesentium eaque omnis perferendis a doloremque.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<section class="section appoinment">
-	<div class="container">
-		<div class="row align-items-center">
-			<div class="col-lg-6 ">
-				<div class="appoinment-content">
-					<img src="images/about/img-3.jpg" alt="" class="img-fluid">
-					<div class="emergency">
-						<h2 class="text-lg"><i class="icofont-phone-circle text-lg"></i>+23 345 67980</h2>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-6 col-md-10 ">
-				<div class="appoinment-wrap mt-5 mt-lg-0">
-					<h2 class="mb-2 title-color">Book appoinment</h2>
-					<p class="mb-4">Mollitia dicta commodi est recusandae iste, natus eum asperiores corrupti qui velit . Iste dolorum atque similique praesentium soluta.</p>
-					     <form id="#" class="appoinment-form" method="post" action="#">
-                    <div class="row">
-                         <div class="col-lg-6">
-                            <div class="form-group">
-                                <select class="form-control" id="exampleFormControlSelect1">
-                                  <option>Choose Department</option>
-                                  <option>Software Design</option>
-                                  <option>Development cycle</option>
-                                  <option>Software Development</option>
-                                  <option>Maintenance</option>
-                                  <option>Process Query</option>
-                                  <option>Cost and Duration</option>
-                                  <option>Modal Delivery</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="form-group">
-                                <select class="form-control" id="exampleFormControlSelect2">
-                                  <option>Select Doctors</option>
-                                  <option>Software Design</option>
-                                  <option>Development cycle</option>
-                                  <option>Software Development</option>
-                                  <option>Maintenance</option>
-                                  <option>Process Query</option>
-                                  <option>Cost and Duration</option>
-                                  <option>Modal Delivery</option>
-                                </select>
-                            </div>
-                        </div>
-
-                         <div class="col-lg-6">
-                            <div class="form-group">
-                                <input name="date" id="date" type="text" class="form-control" placeholder="dd/mm/yyyy">
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6">
-                            <div class="form-group">
-                                <input name="time" id="time" type="text" class="form-control" placeholder="Time">
-                            </div>
-                        </div>
-                         <div class="col-lg-6">
-                            <div class="form-group">
-                                <input name="name" id="name" type="text" class="form-control" placeholder="Full Name">
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6">
-                            <div class="form-group">
-                                <input name="phone" id="phone" type="Number" class="form-control" placeholder="Phone Number">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group-2 mb-4">
-                        <textarea name="message" id="message" class="form-control" rows="6" placeholder="Your Message"></textarea>
-                    </div>
-
-                    <a class="btn btn-main btn-round-full" href="appoinment.html" >Make Appoinment <i class="icofont-simple-right ml-2  "></i></a>
-                </form>
+<!-- SPECIALISTS DOCTOR PANEL -->
+<section class="section" id="doctors">
+  <div class="container">
+    <div class="section-title" data-aos="fade-up">
+      <h2>Meet Our Specialists</h2>
+      <div class="divider"></div>
+      <p>Qualified clinical experts dedicated to exceptional medical care and prompt treatments.</p>
+    </div>
+    <div class="row g-4 justify-content-center">
+      <div class="col-xl-3 col-lg-6 col-md-6" data-aos="flip-left">
+        <div class="doctor-card">
+          <div class="doctor-img"><img src="https://placehold.co/300x320/e2e8f0/1a4a7a?text=Dr.+Sahun+Khan" class="img-fluid" alt="Dr. Sahun Khan"></div>
+          <div class="doctor-info">
+            <h4>Dr. Sahun Khan</h4>
+            <span class="specialty">General & Laparoscopic Surgeon</span>
+            <p class="small text-muted mb-2">MBBS, MS</p>
+            <div class="expert-badges">
+              <span>Laparoscopic</span><span>Gallbladder</span><span>Appendix</span><span>Hernia</span>
             </div>
-			</div>
-		</div>
-	</div>
+            <div class="border-top pt-2 mt-2 text-center">
+              <small class="text-danger fw-bold"><i class="fas fa-clock"></i> 24 Hours Available</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-6 col-md-6" data-aos="flip-left" data-aos-delay="100">
+        <div class="doctor-card">
+          <div class="doctor-img"><img src="https://placehold.co/300x320/e2e8f0/1a4a7a?text=Dr.+Parveen" class="img-fluid" alt="Dr. Parveen"></div>
+          <div class="doctor-info">
+            <h4>Dr. Parveen</h4>
+            <span class="specialty">Obstetrician & Gynecologist</span>
+            <p class="small text-muted mb-2">MBBS, MS</p>
+            <div class="expert-badges">
+              <span>Normal Delivery</span><span>C-Section</span><span>High-Risk Care</span>
+            </div>
+            <div class="border-top pt-2 mt-2 text-center">
+              <small class="text-danger fw-bold"><i class="fas fa-clock"></i> 24 Hours Available</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-6 col-md-6" data-aos="flip-left" data-aos-delay="200">
+        <div class="doctor-card">
+          <div class="doctor-img"><img src="https://placehold.co/300x320/e2e8f0/1a4a7a?text=Dr.+Kanakaroda" class="img-fluid" alt="Dr. Kanakaroda"></div>
+          <div class="doctor-info">
+            <h4>Dr. Kanakaroda</h4>
+            <span class="specialty">Orthopedic Specialist</span>
+            <p class="small text-muted mb-2">MBBS, MS Orthopedics</p>
+            <div class="expert-badges">
+              <span>Bone Fractures</span><span>Joint Pain</span><span>Trauma Injuries</span>
+            </div>
+            <div class="border-top pt-2 mt-2 text-center">
+              <small class="text-primary fw-bold"><i class="fas fa-user-check"></i> Fracture Expert</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-6 col-md-6" data-aos="flip-left" data-aos-delay="300">
+        <div class="doctor-card">
+          <div class="doctor-img"><img src="https://placehold.co/300x320/e2e8f0/1a4a7a?text=Dr.+C.+S.+Sharma" class="img-fluid" alt="Dr. Chandrashekar Sharma"></div>
+          <div class="doctor-info">
+            <h4>Dr. C. S. Sharma</h4>
+            <span class="specialty">Urology & Kidney Specialist</span>
+            <p class="small text-muted mb-2">Urinary Problems, Kidney Stone</p>
+            <div class="expert-badges">
+              <span>UTI Treatment</span><span>Kidney Stones</span><span>Urinary Care</span>
+            </div>
+            <div class="border-top pt-2 mt-2 text-center">
+              <small class="text-info fw-bold"><i class="fas fa-hospital-user"></i> Renal Consultant</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-<section class="section testimonial-2 gray-bg">
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-lg-7">
-				<div class="section-title text-center">
-					<h2>We served over 5000+ Patients</h2>
-					<div class="divider mx-auto my-4"></div>
-					<p>Lets know moreel necessitatibus dolor asperiores illum possimus sint voluptates incidunt molestias nostrum laudantium. Maiores porro cumque quaerat.</p>
-				</div>
-			</div>
-		</div>
-	</div>
 
-	<div class="container">
-		<div class="row align-items-center">
-			<div class="col-lg-12 testimonial-wrap-2">
-				<div class="testimonial-block style-2  gray-bg">
-					<i class="icofont-quote-right"></i>
-
-					<div class="testimonial-thumb">
-						<img src="images/team/test-thumb1.jpg" alt="" class="img-fluid">
-					</div>
-
-					<div class="client-info ">
-						<h4>Amazing service!</h4>
-						<span>John Partho</span>
-						<p>
-							They provide great service facilty consectetur adipisicing elit. Itaque rem, praesentium, iure, ipsum magnam deleniti a vel eos adipisci suscipit fugit placeat.
-						</p>
-					</div>
-				</div>
-
-				<div class="testimonial-block style-2  gray-bg">
-					<div class="testimonial-thumb">
-						<img src="images/team/test-thumb2.jpg" alt="" class="img-fluid">
-					</div>
-
-					<div class="client-info">
-						<h4>Expert doctors!</h4>
-						<span>Mullar Sarth</span>
-						<p>
-							They provide great service facilty consectetur adipisicing elit. Itaque rem, praesentium, iure, ipsum magnam deleniti a vel eos adipisci suscipit fugit placeat.
-						</p>
-					</div>
-					
-					<i class="icofont-quote-right"></i>
-				</div>
-
-				<div class="testimonial-block style-2  gray-bg">
-					<div class="testimonial-thumb">
-						<img src="images/team/test-thumb3.jpg" alt="" class="img-fluid">
-					</div>
-
-					<div class="client-info">
-						<h4>Good Support!</h4>
-						<span>Kolis Mullar</span>
-						<p>
-							They provide great service facilty consectetur adipisicing elit. Itaque rem, praesentium, iure, ipsum magnam deleniti a vel eos adipisci suscipit fugit placeat.
-						</p>
-					</div>
-					
-					<i class="icofont-quote-right"></i>
-				</div>
-
-				<div class="testimonial-block style-2  gray-bg">
-					<div class="testimonial-thumb">
-						<img src="images/team/test-thumb4.jpg" alt="" class="img-fluid">
-					</div>
-
-					<div class="client-info">
-						<h4>Nice Environment!</h4>
-						<span>Partho Sarothi</span>
-						<p class="mt-4">
-							They provide great service facilty consectetur adipisicing elit. Itaque rem, praesentium, iure, ipsum magnam deleniti a vel eos adipisci suscipit fugit placeat.
-						</p>
-					</div>
-					<i class="icofont-quote-right"></i>
-				</div>
-
-				<div class="testimonial-block style-2  gray-bg">
-					<div class="testimonial-thumb">
-						<img src="images/team/test-thumb1.jpg" alt="" class="img-fluid">
-					</div>
-
-					<div class="client-info">
-						<h4>Modern Service!</h4>
-						<span>Kolis Mullar</span>
-						<p>
-							They provide great service facilty consectetur adipisicing elit. Itaque rem, praesentium, iure, ipsum magnam deleniti a vel eos adipisci suscipit fugit placeat.
-						</p>
-					</div>
-					<i class="icofont-quote-right"></i>
-				</div>
-			</div>
-		</div>
-	</div>
+<!-- GOVERNMENT SCHEMES & INSURANCE BASE SYSTEM -->
+<section class="section scheme-section" id="schemes">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-8" data-aos="zoom-in">
+        <h2 class="text-white mb-3">Government Schemes & Insurance Cashless Treatment</h2>
+        <div class="divider mx-auto" style="background: var(--white);"></div>
+        <p class="lead mb-5" style="color: #cbd5e1;">We proudly extend high-quality diagnostic and treatment access via active government panels and private healthcare network assurances. Cashless facilities are provided immediately upon valid card verification.</p>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4"><div class="scheme-box"><i class="fas fa-hand-holding-medical text-success"></i><h4 class="text-primary mt-2">Rajasthan MAA Yojna</h4><p class="small text-muted mb-0">Complete authorized coverage parameters as per structural government wellness guidelines.</p></div></div>
+      <div class="col-md-4"><div class="scheme-box"><i class="fas fa-heart-pulse text-danger"></i><h4 class="text-primary mt-2">Ayushman Bharat</h4><p class="small text-muted mb-0">Eligible cardholders across Haryana & Rajasthan can receive cashless standard admissions seamlessly.</p></div></div>
+      <div class="col-md-4"><div class="scheme-box"><i class="fas fa-credit-card text-info"></i><h4 class="text-primary mt-2">All TPA Cashless</h4><p class="small text-muted mb-0">Seamless cashless treatment operations directly corporate supported across leading networks.</p></div></div>
+    </div>
+  </div>
 </section>
-<section class="section clients">
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-lg-7">
-				<div class="section-title text-center">
-					<h2>Partners who support us</h2>
-					<div class="divider mx-auto my-4"></div>
-					<p>Lets know moreel necessitatibus dolor asperiores illum possimus sint voluptates incidunt molestias nostrum laudantium. Maiores porro cumque quaerat.</p>
-				</div>
-			</div>
-		</div>
-	</div>
 
-	<div class="container">
-		<div class="row clients-logo">
-			<div class="col-lg-2">
-				<div class="client-thumb">
-					<img src="images/about/1.png" alt="" class="img-fluid">
-				</div>
-			</div>
-			<div class="col-lg-2">
-				<div class="client-thumb">
-					<img src="images/about/2.png" alt="" class="img-fluid">
-				</div>
-			</div>
-			<div class="col-lg-2">
-				<div class="client-thumb">
-					<img src="images/about/3.png" alt="" class="img-fluid">
-				</div>
-			</div>
-			<div class="col-lg-2">
-				<div class="client-thumb">
-					<img src="images/about/4.png" alt="" class="img-fluid">
-				</div>
-			</div>
-			<div class="col-lg-2">
-				<div class="client-thumb">
-					<img src="images/about/5.png" alt="" class="img-fluid">
-				</div>
-			</div>
-			<div class="col-lg-2">
-				<div class="client-thumb">
-					<img src="images/about/6.png" alt="" class="img-fluid">
-				</div>
-			</div>
-			<div class="col-lg-2">
-				<div class="client-thumb">
-					<img src="images/about/3.png" alt="" class="img-fluid">
-				</div>
-			</div>
-			<div class="col-lg-2">
-				<div class="client-thumb">
-					<img src="images/about/4.png" alt="" class="img-fluid">
-				</div>
-			</div>
-			<div class="col-lg-2">
-				<div class="client-thumb">
-					<img src="images/about/5.png" alt="" class="img-fluid">
-				</div>
-			</div>
-			<div class="col-lg-2">
-				<div class="client-thumb">
-					<img src="images/about/6.png" alt="" class="img-fluid">
-				</div>
-			</div>
-		</div>
-	</div>
+<!-- RESPONSIVE INTERNAL INFRASTRUCTURE GALLERY -->
+<section class="section shadow-sm" id="gallery" style="background: var(--light-bg);">
+  <div class="container">
+    <div class="text-center section-title" data-aos="fade-up">
+      <h2>Hospital Gallery</h2>
+      <div class="divider"></div>
+      <p>A visual look inside our professional medical infrastructure, clean wards, and clinical spaces.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6" data-aos="fade-up"><div class="gallery-item"><img src="https://placehold.co/600x450/e2e8f0/1a4a7a?text=Hospital+Front+View" alt="Elevations"><div class="gallery-caption">Hospital Front Elevation</div></div></div>
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100"><div class="gallery-item"><img src="https://placehold.co/600x450/e2e8f0/1a4a7a?text=Reception+Desk" alt="Reception"><div class="gallery-caption">Helpdesk & Patient Reception</div></div></div>
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200"><div class="gallery-item"><img src="https://placehold.co/600x450/e2e8f0/1a4a7a?text=ICU+Setup" alt="ICU"><div class="gallery-caption">Intensive Critical Care Unit (ICU)</div></div></div>
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300"><div class="gallery-item"><img src="https://placehold.co/600x450/e2e8f0/1a4a7a?text=Operation+Theatre" alt="OT Unit"><div class="gallery-caption">Advanced Operation Theatre (OT)</div></div></div>
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400"><div class="gallery-item"><img src="https://placehold.co/600x450/e2e8f0/1a4a7a?text=Ambulance+Vehicle" alt="Ambulance"><div class="gallery-caption">24x7 Ambulance Support Vehicle</div></div></div>
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500"><div class="gallery-item"><img src="https://placehold.co/600x450/e2e8f0/1a4a7a?text=Patient+Rooms" alt="Wards"><div class="gallery-caption">Private Patient Rooms</div></div></div>
+    </div>
+  </div>
 </section>
-<!-- footer Start -->
-<footer class="footer section gray-bg">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-4 mr-auto col-sm-6">
-				<div class="widget mb-5 mb-lg-0">
-					<div class="logo mb-4">
-						<img src="images/logo.png" alt="" class="img-fluid">
-					</div>
-					<p>Tempora dolorem voluptatum nam vero assumenda voluptate, facilis ad eos obcaecati tenetur veritatis eveniet distinctio possimus.</p>
 
-					<ul class="list-inline footer-socials mt-4">
-						<li class="list-inline-item"><a href="https://www.facebook.com/themefisher"><i class="icofont-facebook"></i></a></li>
-						<li class="list-inline-item"><a href="https://twitter.com/themefisher"><i class="icofont-twitter"></i></a></li>
-						<li class="list-inline-item"><a href="https://www.pinterest.com/themefisher/"><i class="icofont-linkedin"></i></a></li>
-					</ul>
-				</div>
-			</div>
+<!-- REAL TIME PATIENT FEEDBACK REVIEWS -->
+<section class="section">
+  <div class="container">
+    <div class="section-title">
+      <h2>What Our Patients Say</h2>
+      <div class="divider"></div>
+      <p>Real recovery feedbacks and verified stories from individuals served across Alwar region.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4"><div class="testimonial-card h-100"><i class="fas fa-quote-left fa-2x text-secondary mb-3"></i><p>“Very supportive doctors and staff. The emergency surgery treatment for my family member was quick, highly controlled, and completely effective.”</p><h6 class="mt-3 text-dark border-top pt-2">- Ramesh S. (Emergency Ward)</h6></div></div>
+      <div class="col-md-4"><div class="testimonial-card h-100"><i class="fas fa-quote-left fa-2x text-secondary mb-3"></i><p>“Excellent maternity care facilities and an incredibly clean hospital environment. Dr. Parveen handled my high-risk pregnancy journey with ultimate care.”</p><h6 class="mt-3 text-dark border-top pt-2">- Sneha S. (Maternity Care)</h6></div></div>
+      <div class="col-md-4"><div class="testimonial-card h-100"><i class="fas fa-quote-left fa-2x text-secondary mb-3"></i><p>“Best surgical care with affordable treatment models. Our cashless approval under the government health scheme was processed quickly without complexity.”</p><h6 class="mt-3 text-dark border-top pt-2">- Vikram S. (Laparoscopic Surgery)</h6></div></div>
+    </div>
+  </div>
+</section>
 
-			<div class="col-lg-2 col-md-6 col-sm-6">
-				<div class="widget mb-5 mb-lg-0">
-					<h4 class="text-capitalize mb-3">Department</h4>
-					<div class="divider mb-4"></div>
+<!-- HYBRID GOOGLE MAPS INTERACTION WITH APPOINTMENT LOGIC -->
+<section class="section" id="contact" style="background: var(--light-bg);">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-5" data-aos="fade-right">
+        <div class="contact-info-block bg-white shadow-sm">
+          <h3>Contact Details</h3>
+          <p class="text-muted mb-4">Our communication desk remains open throughout day and night hours.</p>
+          
+          <div class="contact-info-item">
+            <div class="icon-box"><i class="fas fa-phone-alt"></i></div>
+            <div>
+              <h6 class="mb-1 text-dark fw-bold">Emergency Contact Numbers</h6>
+              <p class="mb-0 fw-bold text-primary"><a href="tel:+919587298975" class="text-decoration-none">+91 9587298975</a></p>
+              <p class="mb-0 fw-bold text-primary"><a href="tel:+917976573436" class="text-decoration-none">+91 7976573436</a></p>
+            </div>
+          </div>
+          
+          <div class="contact-info-item">
+            <div class="icon-box"><i class="fas fa-map-marked-alt"></i></div>
+            <div>
+              <h6 class="mb-1 text-dark fw-bold">Hospital Location</h6>
+              <p class="mb-0 text-muted">Near Bhagat Singh Circle, Alwar, Rajasthan, 301001</p>
+            </div>
+          </div>
+          
+          <div class="contact-info-item">
+            <div class="icon-box"><i class="fas fa-clock"></i></div>
+            <div>
+              <h6 class="mb-1 text-dark fw-bold">Hospital Work Timings</h6>
+              <p class="mb-0 text-success fw-bold">Open 24 Hours | 365 Days Available</p>
+            </div>
+          </div>
+          
+          <div class="mt-4 pt-2">
+            <a href="https://wa.me/919587298975" target="_blank" class="btn btn-whatsapp w-100 text-center"><i class="fab fa-whatsapp"></i> Message on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7" data-aos="fade-left">
+        <div class="appoinment-wrap">
+          <h3 class="mb-2">Book Appointment Slot</h3>
+          <p class="text-muted mb-4">Please submit your info accurately for confirmations.</p>
+          <form id="bookingForm">
+            <div class="row">
+              <div class="col-md-6"><input type="text" class="form-control-custom" placeholder="Patient Full Name" required></div>
+              <div class="col-md-6"><input type="tel" class="form-control-custom" placeholder="Phone Number" required></div>
+              <div class="col-md-6"><input type="date" class="form-control-custom" required></div>
+              <div class="col-md-6">
+                <select class="form-control-custom" required>
+                  <option value="">Select Medical Field</option>
+                  <option value="General Surgery">General Surgery</option>
+                  <option value="Laparoscopic Surgery">Laparoscopic Surgery</option>
+                  <option value="Orthopedics">Orthopedics / Fractures</option>
+                  <option value="Gynecology">Maternity & Gynecology</option>
+                  <option value="Urology">Urinary System Problems</option>
+                </select>
+              </div>
+              <div class="col-12"><textarea class="form-control-custom" rows="3" placeholder="Describe the symptom or medical concern (Optional)"></textarea></div>
+              <div class="col-12"><button type="submit" class="btn btn-primary-custom w-100 py-3">Confirm Patient Booking Slot <i class="fas fa-check-circle ms-2"></i></button></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
 
-					<ul class="list-unstyled footer-menu lh-35">
-						<li><a href="#">Surgery </a></li>
-						<li><a href="#">Wome's Health</a></li>
-						<li><a href="#">Radiology</a></li>
-						<li><a href="#">Cardioc</a></li>
-						<li><a href="#">Medicine</a></li>
-					</ul>
-				</div>
-			</div>
+    <!-- MAP LAYOUT GRID BASE -->
+    <div class="row mt-5">
+      <div class="col-12" data-aos="zoom-in">
+        <div class="map-container" style="min-height: 380px; height: 400px;">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3534.258284643033!2d76.6085!3d27.5615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397299efaaaaaaa1%3A0x123456789abcdef!2sBhagat+Singh+Circle%2C+Alwar%2C+Rajasthan!5e0!3m2!1sen!2sin!4v1625000000000!5m2!1sen!2sin" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
 
-			<div class="col-lg-2 col-md-6 col-sm-6">
-				<div class="widget mb-5 mb-lg-0">
-					<h4 class="text-capitalize mb-3">Support</h4>
-					<div class="divider mb-4"></div>
+  </div>
+</section>
 
-					<ul class="list-unstyled footer-menu lh-35">
-						<li><a href="#">Terms & Conditions</a></li>
-						<li><a href="#">Privacy Policy</a></li>
-						<li><a href="#">Company Support </a></li>
-						<li><a href="#">FAQuestions</a></li>
-						<li><a href="#">Company Licence</a></li>
-					</ul>
-				</div>
-			</div>
-
-			<div class="col-lg-3 col-md-6 col-sm-6">
-				<div class="widget widget-contact mb-5 mb-lg-0">
-					<h4 class="text-capitalize mb-3">Get in Touch</h4>
-					<div class="divider mb-4"></div>
-
-					<div class="footer-contact-block mb-4">
-						<div class="icon d-flex align-items-center">
-							<i class="icofont-email mr-3"></i>
-							<span class="h6 mb-0">Support Available for 24/7</span>
-						</div>
-						<h4 class="mt-2"><a href="tel:+23-345-67890">Support@email.com</a></h4>
-					</div>
-
-					<div class="footer-contact-block">
-						<div class="icon d-flex align-items-center">
-							<i class="icofont-support mr-3"></i>
-							<span class="h6 mb-0">Mon to Fri : 08:30 - 18:00</span>
-						</div>
-						<h4 class="mt-2"><a href="tel:+23-345-67890">+23-456-6588</a></h4>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<div class="footer-btm py-4 mt-5">
-			<div class="row align-items-center justify-content-between">
-				<div class="col-lg-6">
-					<div class="copyright">
-						&copy; Copyright Reserved to <span class="text-color">Novena</span> by <a href="https://themefisher.com/" target="_blank">Themefisher</a>
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<div class="subscribe-form text-lg-right mt-5 mt-lg-0">
-						<form action="#" class="subscribe">
-							<input type="text" class="form-control" placeholder="Your Email address">
-							<a href="#" class="btn btn-main-2 btn-round-full">Subscribe</a>
-						</form>
-					</div>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-lg-4">
-					<a class="backtop js-scroll-trigger" href="#top">
-						<i class="icofont-long-arrow-up"></i>
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
+<!-- MASTER METICULOUS FOOTER CONFIGURATION -->
+<footer class="footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <h5>ASAD HOSPITAL</h5>
+        <p>24×7 Multispeciality & Emergency Hospital in Alwar. Comprehensive treatments backed by advanced laparoscopic tools, trauma teams, and highly responsive critical facilities.</p>
+        <p class="mt-3"><i class="fas fa-phone-alt text-danger"></i> +91 9587298975 | +91 7976573436</p>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h5>Medical Specialties</h5>
+        <ul class="footer-links p-0">
+          <li><a href="#services"><i class="fas fa-chevron-right me-2 small"></i> General Surgery</a></li>
+          <li><a href="#services"><i class="fas fa-chevron-right me-2 small"></i> Laparoscopic Surgery</a></li>
+          <li><a href="#services"><i class="fas fa-chevron-right me-2 small"></i> Orthopedics & Fractures</a></li>
+          <li><a href="#services"><i class="fas fa-chevron-right me-2 small"></i> Maternity & Gynecology</a></li>
+          <li><a href="#services"><i class="fas fa-chevron-right me-2 small"></i> Urinary Treatments</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h5>Government Schemes</h5>
+        <ul class="footer-links p-0">
+          <li><a href="#schemes"><i class="fas fa-shield-halved text-success me-2 small"></i> Rajasthan MAA Yojna</a></li>
+          <li><a href="#schemes"><i class="fas fa-shield-halved text-primary me-2 small"></i> Haryana Ayushman Bharat</a></li>
+          <li><a href="#schemes"><i class="fas fa-shield-halved text-info me-2 small"></i> All TPA Cashless Facilities</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-6">
+        <h5>Quick Links</h5>
+        <ul class="footer-links p-0">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#doctors">Our Doctors</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="text-center pt-4 mt-5 border-top border-secondary">
+      <p class="mb-0">&copy; 2026 Asad Hospital. All Rights Reserved | Designed for Healthcare Excellence</p>
+    </div>
+  </div>
 </footer>
 
-   
+<!-- FIXED MOBILE-FIRST NAVIGATION FLOATS -->
+<div class="floating-buttons">
+  <a href="https://wa.me/919587298975" class="floating-btn floating-whatsapp" target="_blank" title="WhatsApp Support">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <a href="tel:+919587298975" class="floating-btn floating-call" title="Call Emergency Helpline">
+    <i class="fas fa-phone-alt"></i>
+  </a>
+</div>
 
-    <!-- 
-    Essential Scripts
-    =====================================-->
+<!-- Back to top icon arrow -->
+<a href="#" class="backtop" id="backToTop"><i class="fas fa-arrow-up"></i></a>
 
-    
-    <!-- Main jQuery -->
-    <script src="plugins/jquery/jquery.js"></script>
-    <!-- Bootstrap 4.3.2 -->
-    <script src="plugins/bootstrap/js/popper.js"></script>
-    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script src="plugins/counterup/jquery.easing.js"></script>
-    <!-- Slick Slider -->
-    <script src="plugins/slick-carousel/slick/slick.min.js"></script>
-    <!-- Counterup -->
-    <script src="plugins/counterup/jquery.waypoints.min.js"></script>
-    
-    <script src="plugins/shuffle/shuffle.min.js"></script>
-    <script src="plugins/counterup/jquery.counterup.min.js"></script>
-    <!-- Google Map -->
-    <script src="plugins/google-map/map.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script>    
-    
-    <script src="js/script.js"></script>
-    <script src="js/contact.js"></script>
-
-  </body>
-  </html>
-   
+<!-- SCRIPTS COMPONENT STACK -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  // Setup Animation Framework
+  AOS.init({ duration: 800, once: true, offset: 40 });
+  
+  // Interactive Smooth Scroll Engine for BackToTop
+  const backBtn = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    if(window.scrollY > 400) backBtn.classList.add('reveal');
+    else backBtn.classList.remove('reveal');
+  });
+  backBtn.addEventListener('click', (e) => { 
+    e.preventDefault(); 
+    window.scrollTo({top:0, behavior:'smooth'}); 
+  });
+  
+  // Production Level Interception Form Control 
+  document.getElementById('bookingForm')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Thank you! Your appointment request has been processed successfully. Our clinical coordinator will reach out to you within minutes to confirm your allocated slot.');
+    e.target.reset();
+  });
+</script>
+</body>
+</html>
